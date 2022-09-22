@@ -1,23 +1,25 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
-* leet - function that encode a string
-*@str:string that will be encoded
-*Return:returns encoded string
-*/
+ * leet - take strings and capitalize words
+ * @a: string to capitalize
+ * Return: capitalized words
+ */
 
-char *leet(char *str)
+char *leet(char *a)
 {
-	int index1 = 0, index2;
-	char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int i, x;
+	char check[] = "aAeEoOtTlL";
+	char change[] = "4433007711";
 
-	while (str[++index1])
+	for (i = 0; *(a + i) != '\0'; i++)
 	{
-		for (index2 = 0; index2 <= 7; index2++)
-		{
-			if (str[index1] == leet[index2] ||
-			 str[index1] - 32 == leet[index2])
-				str[index1] = index2 + '0';
-		}
+		for (x = 0; check[x]; x++)
+			if (check[x] == *(a + i))
+			{
+				*(a + i) = change[x];
+				break;
+			}
 	}
-	return (str);
+	return (a);
 }
