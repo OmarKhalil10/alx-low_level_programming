@@ -2,57 +2,61 @@
 
 /**
 
-*cap_string - function that capitalize first character of a word
+ * cap_string - capitalizes all words of a string
 
-*@str: string to capitalize
+ * @str: the string to change the first letter of a word in uppercase
 
-*Return:returns the capitalized string
+ *
 
-*/
+ * Return: capitalizes letters
+
+ */
 
 char *cap_string(char *str)
 
 {
 
-	int index = 0;
+	int i;
+
+	int j;
+
+	char c[] = {44, 59, 46, 33, 63, 34, 40, 41, 123, 125, 32, 10, 9};
 
 
-	while (str[++index])
+	i = 0;
+
+
+	while (str[i] != '\0')
 
 	{
 
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
+		if (i == 0 && str[i] >= 97 && str[i] <= 122)
 
-			index++;
+		{
 
+			str[i] = str[i] - 32;
 
-		if (str[index - 1] == ' ' ||
+		}
 
-				str[index - 1] == '\t' ||
+		j = 0;
 
-				str[index - 1] == '\n' ||
+		while (c[j] != '\0')
 
-				str[index - 1] == ',' ||
+		{
 
-				str[index - 1] == ';' ||
+			if (c[j] == str[i] && (str[i + 1] >= 97 && str[i + 1] <= 122))
 
-				str[index - 1] == '.' ||
+			{
 
-				str[index - 1] == '!' ||
+				str[i + 1] = str[i + 1] - 32;
 
-				str[index - 1] == '?' ||
+			}
 
-				str[index - 1] == '"' ||
+			j++;
 
-				str[index - 1] == '(' ||
+		}
 
-				str[index - 1] == ')' ||
-
-				str[index - 1] == '{' ||
-
-				str[index - 1] == '}')
-
-			str[index] -= 32;
+		i++;
 
 	}
 
