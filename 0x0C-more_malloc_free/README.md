@@ -1,5 +1,5 @@
-0x0B. C - malloc, free
-======================
+0x0C. C - More malloc, free
+===========================
 
 Concepts
 --------
@@ -13,25 +13,23 @@ Resources
 
 **Read or watch**:
 
--   [0x0a - malloc & free - quick overview.pdf](https://alx-intranet.hbtn.io/rltoken/7q6RmWq86XkUhvmlhrg9bg "0x0a - malloc & free - quick overview.pdf")
--   [Dynamic memory allocation in C - malloc calloc realloc free](https://alx-intranet.hbtn.io/rltoken/pfGb2oVIYLO_1a8jtFGQYw "Dynamic memory allocation in C - malloc calloc realloc free") (*stop at 6:50*)
+-   [Do I cast the result of malloc?](https://alx-intranet.hbtn.io/rltoken/uKhvfzpF3v8Be10NCZlQtA "Do I cast the result of malloc?")
 
 **man or help**:
 
--   `malloc`
--   `free`
+-   `exit (3)`
+-   `calloc`
+-   `realloc`
 
 Learning Objectives
 -------------------
 
-At the end of this project, you are expected to be able to [explain to anyone](https://alx-intranet.hbtn.io/rltoken/2LjkSexDe-xcLQZ0f5ungQ "explain to anyone"), **without the help of Google**:
+At the end of this project, you are expected to be able to [explain to anyone](https://alx-intranet.hbtn.io/rltoken/UzyOEQw26ytlKDLQq7AGXw "explain to anyone"), **without the help of Google**:
 
 ### General
 
--   What is the difference between automatic and dynamic allocation
--   What is `malloc` and `free` and how to use them
--   Why and when use `malloc`
--   How to use `valgrind` to check for memory leak
+-   How to use the `exit` function
+-   What are the functions `calloc` and `realloc` from the standard library and how to use them
 
 Requirements
 ------------
@@ -45,7 +43,7 @@ Requirements
 -   Your code should use the `Betty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl") and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
 -   You are not allowed to use global variables
 -   No more than 5 functions per file
--   The only C standard library functions allowed are `malloc` and `free`. Any use of functions like `printf`, `puts`, `calloc`, `realloc` etc... is forbidden
+-   The only C standard library functions allowed are `malloc`, `free` and `exit`. Any use of functions like `printf`, `puts`, `calloc`, `realloc` etc... is forbidden
 -   You are allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c "_putchar")
 -   You don't have to push `_putchar.c`, we will use our file. If you do it won't be taken into account
 -   In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don't have to push them to your repo (if you do we won't take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
