@@ -1,9 +1,6 @@
 # 0x10. C - Variadic functions
 Foundations - Low-level programming & Algorithm ― Hatching out
 
-###### :copyright: **[Holberton School](https://www.holbertonschool.com/)**
-by _Julien Barbier_
-
 ## Learning Objectives
 * What are variadic functions
 * How to use ```va_start```, ```va_arg``` and ```va_end``` macros
@@ -22,10 +19,3 @@ by _Julien Barbier_
 * [ ] 2. One woman's constant is another woman's variable
 * [x] 3. To be is a to be the value of a variable
 * [x] 4. Real programmers can write assembly code in any language
-
-## Developer
-Javier Andrés Garzón Patarroyo  
-:octocat: [GitHub](https://github.com/javierandresgp/)  
-:link: [Linkedin](https://www.linkedin.com/in/javierandresgp/)  
-:link: [Twitter](https://twitter.com/javierandresgp0)  
-:man_technologist: :books: :computer: :globe_with_meridians:
