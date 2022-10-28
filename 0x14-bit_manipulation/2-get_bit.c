@@ -1,17 +1,21 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
-*get_bit - get the value of a bit at the given index
-*@n: the number
-*@index: index starting from 0 of the bit required
-*
-*Return: The converted value
-*/
-
+ * get_bit - function that returns the value of a bit at a given index.
+ * @n: input
+ * @index: input
+ * Return: the value of the bit at index index or -1 if an error occured
+ */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 63)
-		return (-1);
+	int bit = 0;
 
-	return ((n >> index) & 1);
+	if (n > 0 && index < 64)
+	{
+		bit = (n >> index) & 1;
+		return (bit);
+	}
+	else
+	{
+		return (-1);
+	}
 }
