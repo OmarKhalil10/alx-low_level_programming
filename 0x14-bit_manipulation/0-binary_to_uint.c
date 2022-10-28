@@ -1,44 +1,46 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * binary_to_uint - function that converts a binary number to an unsigned int.
- * @b: is pointing to a string of 0 and 1 chars
- * Return: the converted number, or 0 if there is one or
- * more chars in the string b that is not 0 or 1 b is NULL
+ * binary_to_uint - converts a binary to an unsigned int
+ * @b: the binary number as a string
+ *
+ * Return: the converted value
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int convert = 0;
-	int binary;
-	int i;
-	int j;
+unsigned int decimal = 0;
+int str_len = 0, base = 1;
 
+if (!check_valid_string(b))
+return (0);
 
-	if (b == 0)
-	{
-		return (0);
-	}
-	i = 0;
-	while (b[i] != 0)
-	{
-		if (b[i] != 48 && b[i] != 49)
-		{
-			return (0);
-		}
-		i++;
-	}
-	i = i - 1;
-	for (j = 0; i >= 0; j++, i--)
-	{
-		if (b[i] == 48)
-		{
-			binary = 0;
-		}
-		else if (b[i] == 49)
-		{
-			binary = 1;
-		}
-		binary = binary << j;
-		convert = convert | binary;
-	}
-	return (convert);
+while (b[str_len] != '\0')
+str_len++;
+
+while (str_len)
+{
+decimal += ((b[str_len - 1] - '0') * base);
+base *= 2;
+str_len--;
+}
+return (decimal);
+}
+
+/**
+ * check_valid_string - checks if a string has only 0's and 1's
+ * @b: string to be checked
+ *
+ * Return: 1 if string is valid, 0 otherwise
+ */
+int check_valid_string(const char *b)
+{
+if (b == NULL)
+return (0);
+
+while (*b)
+{
+if (*b != '1' && *b != '0')
+return (0);
+b++;
+}
+return (1);
 }
